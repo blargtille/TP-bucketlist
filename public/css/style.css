@@ -1,113 +1,72 @@
+/**
+global styles
+ */
 body {
-    background: linear-gradient(#000000, #132135);
-    background-attachment: fixed;
-    color: #EEE;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
 .container {
+    min-width: 360px;
     max-width: 1000px;
     margin: auto;
-    padding: 5px;
+    padding: 10px 20px;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: #000;
 }
 
 a:hover {
-    color: #BC956B;
+    text-decoration: underline;
 }
 
-img {
-    max-width: 100%;
-}
-
-body > .container {
+/**
+header
+ */
+.site-title {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    font-size: 48px;
 }
 
-header img {
-    height: 70px;
+.site-title img {
+    height: 48px;
+    display: block;
+    margin-right: 5px;
 }
 
-main {
-    flex: 1;
-}
-
-nav ul {
+header nav ul {
+    margin: 5px 0;
     display: flex;
     list-style: none;
     padding-left: 0;
 }
 
-nav li {
-    margin-right: 1rem;
-}
-
-.series-list {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-}
-
-label {
+header nav a {
     display: block;
-}
-
-input,
-textarea,
-select {
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-    max-width: 50%;
-    width: 150px;
-}
-
-.flash {
-    padding: 20px;
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin : 1rem 0;
-    border-radius: 5px;
-}
-
-.flash-success {
-    background-color: lawngreen;
+    padding: 5px 8px;
+    margin-right: 10px;
 }
 
 /**
- * Début css pour la page de détail d'une série
+main
  */
-.serie-details {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
+main {
+    padding: 30px 0;
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
 }
 
-.serie-details-infos > div {
-    margin-bottom: 1rem;
+h1 {
+    margin: 0;
 }
 
-@media screen and (min-width: 700px) {
-    .serie-details {
-        grid-template-columns: 300px 1fr;
-    }
-}
 /**
- * Fin css pour la page de détail d'une série
+footer
  */
-
-.seasons article {
-    display: flex;
-    margin-bottom: 1rem;
+footer {
+    padding: 20px 0;
+    text-align: center;
 }
-
-.seasons article img {
-    max-height: 200px;
-    margin-right: 0.6rem;
-}
-

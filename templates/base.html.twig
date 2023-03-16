@@ -7,13 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="icon" href="{{ asset('img/favicon.png') }}">
-    <title>{% block title %}Bucketlist{% endblock %}</title>
+
+    <title>{% block title %}Bucket-List{% endblock %}</title>
 </head>
 <body>
 
-<header>
-    <h1><a href="{{ path(main_home) }}"><img src="{{ asset('img/logo.svg') }}"></a></h1>
-</header>
+<div class="container">
+   {% include 'inc/header.html.twig' %}
+</div>
+
+<main>
+    {% block body %}{% endblock %}
+</main>
+
+<footer>
+    &copy;Bucket-List {{ 'now' | date('Y') }}
+</footer>
 
 </body>
 </html>
