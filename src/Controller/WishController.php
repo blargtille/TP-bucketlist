@@ -42,8 +42,8 @@ class WishController extends AbstractController
 
         $wishForm->handleRequest($request);
 
-        if($wishForm -> isSubmitted() && $wishForm -> isValid()){
-            $wish ->setDateCreated(new \DateTime('now'));
+        if($wishForm->isSubmitted() && $wishForm->isValid()){
+            $wish->setDateCreated(new \DateTime('now'));
             $entityManager->persist($wish);
             $entityManager->flush();
 
