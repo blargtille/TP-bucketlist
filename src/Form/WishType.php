@@ -13,9 +13,7 @@ class WishType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title', TextType::class, [
-                'label'=>'Title'
-            ])
+            ->add('title')
             ->add('description')
             ->add('author')
 
