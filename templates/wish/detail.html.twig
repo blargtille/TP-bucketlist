@@ -9,6 +9,7 @@
         <div>Description: {{ wish.description }}</div>
         <div>Auteur: {{ wish.author }}</div>
         <div>Date de création: {{ wish.dateCreated|date('d-m-Y H:i:s') }}</div>
+        <div>Catégorie: {{ wish.category.name }}</div>
 
 {% endblock %}
 
